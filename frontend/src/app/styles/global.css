@@ -1,0 +1,188 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+div#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Минимальная высота — вся высота окна */
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+/* header */
+header {
+  position: relative;
+  background-color: #3a5a40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 200px;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+header .contacts {
+  position: absolute;
+  display: flex;
+  background-color: rgb(255, 255, 255, 20%);
+  padding: 10px;
+  border-radius: 20px;
+  flex-direction: column;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* main */
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 40px;
+}
+/* footer */
+footer {
+  background-color: #3a5a40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin: 20px 0;
+}
+
+.disclaimer {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* components */
+ul {
+  list-style-type: square;
+}
+
+a {
+  color: #dda15e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #bc6c25;
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  height: auto;
+  max-width: 100px;
+  padding: 0 15px;
+  background-color: #3a5a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #344e41;
+  transform: scale(1.01);
+}
+
+/* game */
+.game-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#ball {
+  width: 50px;
+  height: 50px;
+  background-color: #3a5a40;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  transition: left 0.5s ease, top 0.5s ease;
+}
+
+#score,
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.img:hover {
+  transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  /* header */
+  header {
+    height: 450px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header .contacts {
+    top: 80%;
+  }
+
+  .game-container {
+    position: static !important;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  button {
+    width: auto;
+    padding: 10px 20px;
+  }
+}
