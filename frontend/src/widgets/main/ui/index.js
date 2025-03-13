@@ -9,7 +9,7 @@ export function renderMain() {
       <p>Time left: <span id="timer">10</span>min</p> 
     </div>
     <h2>About myself</h2>
-    <div id="ball"></div>
+    <button id="ball"></button>
   `;
   section.appendChild(renderCharacter());
 
